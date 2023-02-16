@@ -8,6 +8,7 @@ buttons.forEach((button) => {
   button.addEventListener('click', function () {
     let letter = this.innerText;
     checkButton(letter);
+    animateBtn(letter);
   });
 });
 
@@ -16,6 +17,7 @@ buttons.forEach((button) => {
 
 document.addEventListener('keydown', function (event) {
   checkButton(event.key);
+  animateBtn(event.key);
 });
 
 // Function to check if the button 'letter' is selected and play the sound
@@ -55,4 +57,10 @@ function checkButton(letter) {
       console.log(this);
     }
   }
+}
+
+function animateBtn(letter) {
+  let selectedLetter = document.querySelector(`.${letter}`);
+  selectedLetter.classList.toggle('pressed');
+  setTimeout(() => selectedLetter.classList.toggle('pressed'), 100);
 }

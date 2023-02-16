@@ -53,8 +53,9 @@ footer {
 }
 
 .pressed {
-  box-shadow: 0 3px 4px 0 #dbedf3;
-  opacity: 0.5;
+  box-shadow: 0 3px 4px 0 #f3e9db;
+  transform: scale(1.1);
+  transform: translateY(-10px);
 }
 
 .red {
@@ -77,4 +78,5 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+  transition: all ease-in 0.1s;
 }
